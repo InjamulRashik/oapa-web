@@ -1,0 +1,15 @@
+#nav-button {
+    background-color: #6152A2;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+body {
+    font-family: 'Quicksand',
+
+}
+
+.nav-link {
+    color: #6152A2;
+}
