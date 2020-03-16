@@ -11,10 +11,11 @@ function success(position) {
     var coords = new google.maps.LatLng(myLat, myLong);
 
     var mapOptions = {
+
         zoom: 18,
         center: coords,
         mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+    }
 
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var marker = new google.maps.Marker({
