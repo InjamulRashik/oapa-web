@@ -43,11 +43,36 @@
             </nav>
         </div>
 
-        <div id="map"></div>
-        <script src="../js/location.js"></script>
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7LhjV6Wv82v1ioXeMnemjP_L0eCflJYk&callback=initMap"
-            async defer></script>
+        <div class="row d-flex justify-content-around align-items-center">
+            <div class="col-md-6 ">
+                <img id="banner" src="../banners/map.png" alt="">
+            </div>
+            <div class="col-md-6" id="login-section">
+                <div id="card-bg" class="card text-center">
+                    <div class="card-header">
+
+
+                        <img src="../icons/userdp.png" alt="" class="user"><br>
+                        <label id="username" for="">Test Ahmed Khan</label><br>
+                        <label id="address" for="">Dhaka,Bangladesh</label>
+                    </div>
+
+                    <div class="card-body">
+                        <label id="label-location" for="">Location</label>
+                        <div id="map">
+                            <script src="../js/location.js"></script>
+                            <script
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7LhjV6Wv82v1ioXeMnemjP_L0eCflJYk&callback=initMap"
+                                async defer></script>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn">Done</button> <br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </form>
     <script src="../jquery/jquery.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
