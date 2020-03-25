@@ -7,7 +7,7 @@
 
 body {
   font-family: "Quicksand";
-  background-image: url("./banners/bg-landing.png");
+  /* background-image: url("./banners/bg-landing.png"); */
   background-repeat: no-repeat;
 }
 
@@ -25,6 +25,7 @@ body {
   border-color: transparent;
   border-radius: 10px;
 }
+
 #bg-banner {
   height: 350px;
   width: 350px;
@@ -35,13 +36,17 @@ body {
   border-color: transparent;
   border-radius: 10px;
 }
+
 #bold-apa {
   color: #6152a2;
   font-weight: 600;
   font-size: 40px;
 }
+
 .p-2 {
-  color: white;
+  margin: 20px;
+
+  color: #403474;
 }
 
 .get-started {
