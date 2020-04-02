@@ -9,6 +9,7 @@ body {
   font-family: "Quicksand";
   /* background-image: url("./banners/bg-landing.png"); */
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .nav-link {
