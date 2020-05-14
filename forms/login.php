@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+  $chk_val = "true";
+  if(isset($_GET["chk"])){
+    $chk_val = $_GET["chk"];
+  }
+?>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +20,16 @@
   </head>
 
   <body>
-    <form action="location.html" method="post">
+    <?php
+    if($chk_val=="false"){
+    ?>
+    <script>alert("Number/Pin Does not Match")</script>
+    <?php
+
+
+  }
+  ?>
+    <form action="login_check.php" method="post">
       <div class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"
@@ -79,7 +94,7 @@
               <input
                 id="input"
                 type="text"
-                name=""
+                name="num"
                 id=""
                 required
                 oninvalid="this.setCustomValidity('Enter Phone Number')"
@@ -90,7 +105,7 @@
               <input
                 id="input"
                 type="password"
-                name=""
+                name="pin"
                 id=""
                 required
                 oninvalid="this.setCustomValidity('Enter Pin Number')"
@@ -99,7 +114,7 @@
               />
             </div>
             <div class="card-footer">
-              <button id="btn">Login</button> <br />
+              <input id=btn type="submit" name="submit" value="Login">
               <h5>
                 <span> Haven't Registered Yet? </span>
                 <a id="link" href="../forms/registration.html">Register Now!</a>
