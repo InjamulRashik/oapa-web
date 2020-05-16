@@ -1,13 +1,13 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","logintest");
+$conn = mysqli_connect("localhost","root","","oapa");
 
 if(isset($_POST["submit"])){
 
-  $num = $_POST["num"];
+  $phone = $_POST["phone"];
   $pin = $_POST["pin"];
 
-  $sql = mysqli_query($conn,"SELECT count(*) as total FROM login WHERE number = '".$num."' AND pin = '".$pin."'") or die(mysqli_error($conn));
+  $sql = mysqli_query($conn,"SELECT count(*) as total FROM user WHERE phone = '".$phone."' AND pin = '".$pin."'") or die(mysqli_error($conn));
 
   $rw = mysqli_fetch_array($sql);
 

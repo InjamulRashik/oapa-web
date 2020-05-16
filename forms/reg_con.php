@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/registration.css" />
+    <link rel="stylesheet" href="../styles/reg_con.css" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet" />
-    <title>Login</title>
+    <title>Confirmation</title>
 </head>
 
 <body>
 
-    <form action="login.html" method="post">
+    <form action="" method="post">
         <div class="">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
                 <a class="navbar-brand" href="#"><img src="../icons/navlogo.png" alt="" /></a>
@@ -42,40 +42,14 @@
                 </div>
             </nav>
         </div>
+        <div class ="msg">
+            <h1 >Congratulations!</h1> <br>
+            <h2 class="h2">You Have Successfully Registered</h2> <br>
+            
+            <a class="link" href="http://localhost/web-tech-project/oapa-web/forms/login.php">Back to Login</a>
 
 
-        <div class="row d-flex justify-content-around align-items-center">
-            <div class="col-md-6 ">
-                <img id="banner" src="../banners/registration.png" alt="">
-            </div>
-            <div class="col-md-6" id="login-section">
-                <div id="card-bg" class="card text-center">
-                    <div class="card-header">
-                        <label for="">Registration Form</label><br>
-                    </div>
-
-                    <div class="card-body">
-                        <label id="label" for="">Name</label>
-                        <input id="input" type="text" name="name" id="" placeholder="Your Name"><br>
-                        <label id="label" for="">UserID</label>
-                        <input id="input" type="text" name="user-id" id="" placeholder="Your UserID"><br>
-                        <label id="label" for="">Phone</label>
-                        <input id="input" type="text" name="phone" id="" placeholder="Your Phone Number"><br>
-                        <label id="label" for="">Pin </label>
-                        <input id="input" type="password" name="password" id="" placeholder="* * * * * *"><br>
-                        <label id="label" for="">Gender</label>
-                        <input type="radio" name="male" id="radio"> <label id="label" for="">Male</label>
-                        <input type="radio" name="female" id=""> <label id="label" for="">Female</label>
-
-                    </div>
-                    <div class="card-footer">
-                        <button id="btn">Register</button> <br>
-
-                    </div>
-                </div>
-            </div>
         </div>
-
 
 
     </form>

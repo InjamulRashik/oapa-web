@@ -9,7 +9,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/registration.css" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
     <link
@@ -20,16 +20,16 @@
   </head>
 
   <body>
-    <?php
+       <?php
     if($chk_val=="false"){
     ?>
-    <script>alert("Number/Pin Does not Match")</script>
+    <script>alert("Phone Number is already in use!")</script>
     <?php
 
 
   }
   ?>
-    <form action="login_check.php" method="post">
+    <form action="reg_check.php" method="post">
       <div class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"
@@ -77,48 +77,66 @@
 
       <div class="row d-flex justify-content-around align-items-center">
         <div class="col-md-6">
-          <img id="banner" src="../banners/login.png" alt="" />
+          <img id="banner" src="../banners/registration.png" alt="" />
         </div>
         <div class="col-md-6" id="login-section">
           <div id="card-bg" class="card text-center">
             <div class="card-header">
-              <label for="">Login As :</label><br />
-              <img src="../icons/admin.png" alt="" class="admin" />
-              <img src="../icons/user.png" alt="" class="user" /><br />
-              <label id="admin" for="">Admin</label>
-              <label id="user" for="">User</label>
+              <label for="">Registration Form</label><br />
             </div>
 
             <div class="card-body">
-              <label id="label" for="">Enter Your Phone Number</label> <br />
+              <label id="label" for="">Name</label>
+              <input
+                id="input"
+                type="text"
+                name="name"
+                id=""
+                placeholder="Your Name"
+                required
+              /><br />
+              <label id="label" for="">UserID</label>
+              <input
+                id="input"
+                type="text"
+                name="id"
+                id=""
+                placeholder="Your UserID"
+                required
+              /><br />
+              <label id="label" for="">Phone</label>
               <input
                 id="input"
                 type="text"
                 name="phone"
                 id=""
+                placeholder="Your Phone Number"
                 required
-                oninvalid="this.setCustomValidity('Enter Phone Number')"
-                onchange="this.setCustomValidity('')"
-                placeholder="+8801900000000"
               /><br />
-              <label id="label" for="">Enter Your Pin Number</label> <br />
+              <label id="label" for="">Pin </label>
               <input
                 id="input"
                 type="password"
                 name="pin"
                 id=""
-                required
-                oninvalid="this.setCustomValidity('Enter Pin Number')"
-                onchange="this.setCustomValidity('')"
                 placeholder="* * * * * *"
-              />
+                required
+              /><br />
+              <label id="label" for="">Gender</label>
+              <input type="radio" name="gender" id="radio" value="m" required />
+              <label id="label" for="">Male</label>
+              <input type="radio" name="gender" id="radio" value="f" required />
+              <label id="label" for="">Female</label> <br>
+              <label id = "label"for="">Profession</label>
+              <select name="prof" id="prof" required>
+                <option id = "label" selected hidden value = "">Select Profession</option>
+                <option id = "label" value="student">Student</option>
+                <option id = "label" value="service">Service-Holder</option>
+                <option id = "label" value="house">Housewif</option>
+              </select>
             </div>
             <div class="card-footer">
-              <input id=btn type="submit" name="submit" value="Login">
-              <h5>
-                <span> Haven't Registered Yet? </span>
-                <a id="link" href="../forms/registration.php">Register Now!</a>
-              </h5>
+              <input id="btn" type="submit" name="submit" value="Regestration"> <br />
             </div>
           </div>
         </div>
@@ -126,6 +144,5 @@
     </form>
     <script src="../jquery/jquery.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/login.js"></script>
   </body>
 </html>
