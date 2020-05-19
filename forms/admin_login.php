@@ -23,13 +23,13 @@
     <?php
     if($chk_val=="false"){
     ?>
-    <script>alert("Number/Pin Does not Match")</script>
+    <script>alert("Admin ID/Pin Incorrect")</script>
     <?php
 
 
   }
   ?>
-    <form action="login_check.php" method="post">
+    <form action="admin_login_check.php" method="post">
       <div class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"
@@ -82,24 +82,25 @@
         <div class="col-md-6" id="login-section">
           <div id="card-bg" class="card text-center">
             <div class="card-header">
-              <label for="">Login As :</label><br />           
-              <img src="../icons/user.png" alt="" class="user" /><br />
-              <label id="user" for="">User</label>
+              <label for="">Login As :</label><br />
+              <img src="../icons/admin.png" alt="" class="admin" /> <br>
+              <label id="admin" for="">Admin</label>
+              
             </div>
 
             <div class="card-body">
-              <label id="label" for="">Enter Your Phone Number</label> <br />
+              <label id="label" for="">Enter Admin ID</label> <br />
               <input
                 id="input"
                 type="text"
-                name="phone"
+                name="id"
                 id=""
                 required
-                oninvalid="this.setCustomValidity('Enter Phone Number')"
+                oninvalid="this.setCustomValidity('Enter ID')"
                 onchange="this.setCustomValidity('')"
-                placeholder="+8801900000000"
+                placeholder=""
               /><br />
-              <label id="label" for="">Enter Your Pin Number</label> <br />
+              <label id="label" for="">Enter Admin Pin Number</label> <br />
               <input
                 id="input"
                 type="password"
@@ -108,19 +109,14 @@
                 required
                 oninvalid="this.setCustomValidity('Enter Pin Number')"
                 onchange="this.setCustomValidity('')"
-                placeholder="* * * * * *"
               />
             </div>
             <div class="card-footer">
               <input id=btn type="submit" name="submit" value="Login">
-              <h5>
-                <span> Haven't Registered Yet? </span>
-                <a id="link" href="../forms/registration.php">Register Now!</a>
-              </h5>
             </div>
           </div>
         </div>
-        <a id="btn" href="http://localhost/web-tech-project/oapa-web/forms/admin_login.php">Login as Admin</a>
+        <a id="btn" href="http://localhost/web-tech-project/oapa-web/forms/login.php">Login as User</a>
       </div>
     </form>
     <script src="../jquery/jquery.js"></script>
