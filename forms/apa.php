@@ -122,7 +122,7 @@
                 </div>
                  </form>
             
-        <a id="link" href="http://localhost/web-tech-project/oapa-web/forms/admin.php">Back to Login</a>
+        <a id="link" href="http://localhost/web-tech-project/oapa-web/forms/admin.php">Back to Admin Panel</a>
 
 
     <script src="../jquery/jquery.js"></script>

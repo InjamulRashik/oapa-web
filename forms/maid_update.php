@@ -11,7 +11,7 @@
 
  $query = mysqli_query($con,$q);
 
- header('location:display.php');
+ header('location:maid_display.php');
  }
 
 ?>
