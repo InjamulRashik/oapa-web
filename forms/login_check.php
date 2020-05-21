@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
   $rw = mysqli_fetch_array($sql);
 
   if($rw['total']>0){
-    header("Location:location.html");
+    header("Location:location.php");
     exit();
   }
   else{

@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
       rel="stylesheet"
     />
-    <title>Login</title>
+    <title>Registration</title>
   </head>
 
   <body>

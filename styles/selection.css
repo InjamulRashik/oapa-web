@@ -97,3 +97,12 @@ h6 {
 #tr_head {
   background-color: #6152a2;
 }
+#confirm-btn {
+  background-color: #6152a2;
+  color: #dbd7ee;
+  font-weight: medium;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}

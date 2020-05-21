@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/payment.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
       rel="stylesheet"
     />
-    <title>Location</title>
+    <title>Admin Panel</title>
   </head>
 
   <body>
@@ -58,6 +58,25 @@
             </ul>
           </div>
         </nav>
+      </div>
+      <div class="container">
+        <div id="card-bg" class="card text-center">
+          <div class="card-header">
+            <img src="../icons/admin.png" alt="" class="user" /><br />
+            <label id="username" for="">Welcome Admin</label><br />
+          </div>
+
+          <div class="card-body">
+            <a id="btn" href="../forms/apa.php">Register APA</a>
+            <a id="btn" href="../forms/maid_display.php">Update/Delete Maid</a>
+            <a id="btn" href="../forms/baby_display.php"
+              >Update/Delete B.Sitter</a
+            >
+          </div>
+          <div class="card-footer">
+            <a id="btn" href="admin_login.php">Logout</a>
+          </div>
+        </div>
       </div>
     </form>
     <script src="../jquery/jquery.js"></script>

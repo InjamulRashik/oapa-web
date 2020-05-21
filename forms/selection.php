@@ -13,11 +13,10 @@
  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-    <title>Location</title>
+    <title>Selection</title>
   </head>
 
   <body>
-    <form action="" method="post">
       <div class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"
@@ -80,7 +79,7 @@
  
  <tr id="tr_head"class=" text-white text-center">
  
- <th> MaidId </th>
+ 
  <th> Maid Name </th>
  <th> Hourley Rate </th>
  <th> Selection</th>
@@ -97,10 +96,9 @@
  while($res = mysqli_fetch_array($query)){
  ?>
  <tr id="tr_body" class="text-center">
- <td> <?php echo $res['maidid'];  ?> </td>
  <td> <?php echo $res['maidname'];  ?> </td>
  <td> <?php echo $res['maidrate'];  ?> </td>
- <td> <button id="btn" class="btn-primary btn"> <a href="maid_update.php?maidid=<?php echo $res['maidid']; ?>" class="text-white"> Select </a>  </button> </td>
+ <td> <button class="btn-primary btn"> <a href="" class="text-white"> Select </a>  </button> </td>
 
  </tr>
 
@@ -125,7 +123,6 @@
  
  <tr id="tr_head"class=" text-white text-center">
  
- <th> BabyId </th>
  <th> Baby-Sitter Name </th>
  <th> Hourley Rate </th>
  <th> Selection </th>
@@ -142,10 +139,9 @@
  while($res = mysqli_fetch_array($query)){
  ?>
  <tr id="tr_body" class="text-center">
- <td> <?php echo $res['babyid'];  ?> </td>
  <td> <?php echo $res['babyname'];  ?> </td>
  <td> <?php echo $res['babyrate'];  ?> </td>
- <td> <button id="btn" class="btn-primary btn"> <a href="baby_update.php?babyid=<?php echo $res['babyid']; ?>" class="text-white"> Select </a>  </button> </td>
+ <td> <button id="btn" class="btn-primary btn">  Select  </button> </td>
 
  </tr>
 
@@ -173,17 +169,25 @@
               <div class="payment">
                 <div id="info-section"class="d-flex justify-content-between"><h6  for="">Service Hour</h6><h6 >1 Hour</h6> </div> <br>
                 <br>
-                 <div  class="d-flex justify-content-between"><h6  for="">Charge</h6><h6 >100 BDT</h6> </div> <br>
+                 <div  class="d-flex justify-content-between"><h6>Charge</h6><h6>100 BDT</h6> </div> <br>
                   <div id="info-section" class="d-flex justify-content-between"><h6  for="">Service Charge</h6><h6 >10 %</h6> </div> <br>
                   <br>
                    <div class="d-flex justify-content-between"><h6  for="">Total Charge</h6><h6 >110 BDT</h6> </div> <br>
                 <p>NB: All charges are expected, depends on your <span>service time</span></p>
               </div>
+          
+            </div>
+            
+ <div class="card-footer">
+                        <a id="btn" href="payment.html">Confirm</a>
+                        </div>
+
           </div>
-          </div>
+
+          
         </div>
+        
       </div>
-    </form>
     <script type="text/javascript">
  
  $(document).ready(function(){
@@ -191,6 +195,7 @@
  }) 
  
  </script>
+ <script src="../js/selection.js"></script>
     <script src="../jquery/jquery.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
   </body>

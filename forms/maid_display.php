@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title></title>
+ <title>Maid Info</title>
 
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
@@ -60,6 +60,7 @@
 
  </div>
  </div>
+ <div class=".container"><a id="link" href="http://localhost/web-tech-project/oapa-web/forms/admin.php">Back to Admin Panel</a></div>
 
  <script type="text/javascript">
  
