@@ -3,7 +3,7 @@
 $name = "";
 $rate = 0;
   $smId = 0; 
-   $sId = 0; 
+   $sId = 0;
   
   if(isset($_GET['selectmId'])){
     $smId = $_GET['selectmId'];

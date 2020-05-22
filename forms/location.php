@@ -1,5 +1,8 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8" />
@@ -67,7 +70,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button id="btn">Done</button> <br>
+                        <a id = "btn" href="http://localhost/web-tech-project/oapa-web/forms/selection.php">Done</a>
                     </div>
                 </div>
             </div>

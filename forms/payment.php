@@ -141,7 +141,7 @@
           </div>
 
           <div class="card-footer">
-            <button id="btn">Done</button>
+            <a id ="btn" href="http://localhost/web-tech-project/oapa-web/forms/about.php">Done</a>
           </div>
         </div>
       </div>
