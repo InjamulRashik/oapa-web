@@ -130,7 +130,7 @@
               <br />
               <div class="d-flex justify-content-between">
                 <h6 for="">Charge</h6>
-                <h6 id="rateValue"><?php echo $data['rate'] ?>BDT</h6>
+                <h6 id="rateValue"><?php echo $data['rate'] ?></h6>
               </div>
               <br />
               <div id="info-section" class="d-flex justify-content-between">
@@ -177,6 +177,7 @@
       var charge = document.getElementById("rateValue").innerHTML;
       var total = (charge/60*time)+ (((charge/60*time))*0.1);
       document.getElementById("total").innerHTML = total;
+      console.log(charge);
 
 
     });
