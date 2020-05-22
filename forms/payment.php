@@ -1,9 +1,23 @@
+<?php
+   $data['name'] = "";
+   $data['rate'] = 0;
+   if(isset($_GET['name'])){
+    $data['name'] = $_GET['name'];
+    $data['rate'] = $_GET['rate'];
+
+    
+   }
+
+  
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/payment.css" />
+    <link rel="stylesheet" href="../styles/slip.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
 
     <link
@@ -79,7 +93,7 @@
           </div>
 
           <div class="card-footer">
-            <button id="btn">Get Payment Slip</button>
+            <button id="btn" onclick = "update()";>Get Payment Slip</button>
           </div>
         </div>
       </div>
@@ -93,7 +107,7 @@
           <div class="card-body">
             <div class="img">
               <img src="../icons/userdp.png" alt="" class="user" /><br />
-              <label id="username" for="">Test Ahmed Khan</label><br />
+              <label id="username" for=""><?php echo $data['name'] ?></label><br />
               <label id="address" for="">Dhaka,Bangladesh</label>
             </div>
             <div class="payment">
@@ -105,7 +119,7 @@
               <br />
               <div class="d-flex justify-content-between">
                 <h6 for="">Charge</h6>
-                <h6>100 BDT</h6>
+                <h6><?php echo $data['rate'] ?></h6>
               </div>
               <br />
               <div id="info-section" class="d-flex justify-content-between">
@@ -137,4 +151,5 @@
     <script src="../jquery/jquery.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
   </body>
+  <script>
 </html>

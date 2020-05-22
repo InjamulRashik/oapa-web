@@ -1,3 +1,37 @@
+<?php
+ include 'conn.php'; 
+$name = "";
+$rate = 0;
+  $smId = 0; 
+   $sId = 0; 
+  
+  if(isset($_GET['selectmId'])){
+    $smId = $_GET['selectmId'];
+    
+ $q = "select * from maid where maidid = '$smId' ";
+
+ $query = mysqli_query($con,$q);
+
+ while($res = mysqli_fetch_array($query)){
+   $name = $res['maidname'];
+   $rate = $res['maidrate'];
+ }
+  }
+  elseif(isset($_GET['selectId'])){
+    $sId = $_GET['selectId'];
+    
+ $q = "select * from baby where babyid = '$sId' ";
+
+ $query = mysqli_query($con,$q);
+
+ while($res = mysqli_fetch_array($query)){
+   $name = $res['babyname'];
+   $rate = $res['babyrate'];
+ }
+  }
+  $charge = 10;
+  $total = $rate*0.1+$rate;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -98,7 +132,11 @@
  <tr id="tr_body" class="text-center">
  <td> <?php echo $res['maidname'];  ?> </td>
  <td> <?php echo $res['maidrate'];  ?> </td>
- <td> <button class="btn-primary btn"> <a href="" class="text-white"> Select </a>  </button> </td>
+ <td> <button class="btn-primary btn"> <a href="selection.php?selectmId=<?php 
+ echo $res['maidid']; 
+ ?>" class="text-white"> Select </a>  </button> </td>
+
+ </tr>
 
  </tr>
 
@@ -141,7 +179,9 @@
  <tr id="tr_body" class="text-center">
  <td> <?php echo $res['babyname'];  ?> </td>
  <td> <?php echo $res['babyrate'];  ?> </td>
- <td> <button id="btn" class="btn-primary btn">  Select  </button> </td>
+<td> <button class="btn-primary btn"> <a href="selection.php?selectId=<?php 
+ echo $res['babyid']; 
+ ?>" class="text-white"> Select </a>  </button> </td>
 
  </tr>
 
@@ -163,23 +203,23 @@
             <div class="card-body">
               <div class=img>
                 <img src="../icons/userdp.png" alt="" class="user"><br>
-                        <label id="username" for="">Test Ahmed Khan</label><br>
+                        <label id="username" for=""><?php echo $name ?></label><br>
                         <label id="address" for="">Dhaka,Bangladesh</label>
               </div>
               <div class="payment">
                 <div id="info-section"class="d-flex justify-content-between"><h6  for="">Service Hour</h6><h6 >1 Hour</h6> </div> <br>
                 <br>
-                 <div  class="d-flex justify-content-between"><h6>Charge</h6><h6>100 BDT</h6> </div> <br>
-                  <div id="info-section" class="d-flex justify-content-between"><h6  for="">Service Charge</h6><h6 >10 %</h6> </div> <br>
+                 <div  class="d-flex justify-content-between"><h6>Charge</h6><h6><?php echo $rate ?> BDT</h6> </div> <br>
+                  <div id="info-section" class="d-flex justify-content-between"><h6  for="">Service Charge</h6><h6 ><?php echo $charge ?>%</h6> </div> <br>
                   <br>
-                   <div class="d-flex justify-content-between"><h6  for="">Total Charge</h6><h6 >110 BDT</h6> </div> <br>
+                   <div class="d-flex justify-content-between"><h6  for="">Total Charge</h6><h6 ><?php echo $total ?> BDT</h6> </div> <br>
                 <p>NB: All charges are expected, depends on your <span>service time</span></p>
               </div>
           
             </div>
             
  <div class="card-footer">
-                        <a id="btn" href="payment.html">Confirm</a>
+                        <a id="btn" href="payment.php?name=<?php  echo $name;?>&&rate=<?php echo $rate; ?>">Confirm</a>
                         </div>
 
           </div>
