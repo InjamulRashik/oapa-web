@@ -8,8 +8,16 @@
     
    }
 
+   $startTime = "";
+   $endtime = "";
+   $timediff = "";
+
+   $min  = "";
+
   
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -26,6 +34,7 @@
     />
 
     <title>Payment Slip</title>
+   
   </head>
 
   <body>
@@ -87,13 +96,13 @@
             </div>
 
             <div class="buttons">
-              <button id="startStop" onclick="startStop()">Start</button>
-              <button id="reset" onclick="reset()">Stop</button>
+              <button id="startStop" onclick=" startStop();">Start</button>
+              <button id="reset" onclick="reset(); ">Stop</button>
             </div>
           </div>
 
           <div class="card-footer">
-            <button id="btn" onclick = "update()";>Get Payment Slip</button>
+            <button id="btn" class="btnsub">Get Payment Slip</button>
           </div>
         </div>
       </div>
@@ -113,13 +122,13 @@
             <div class="payment">
               <div id="info-section" class="d-flex justify-content-between">
                 <h6 for="">Service Hour</h6>
-                <h6>1 Hour</h6>
+                <h6 id="settime">1 Hour</h6>
               </div>
               <br />
               <br />
               <div class="d-flex justify-content-between">
                 <h6 for="">Charge</h6>
-                <h6><?php echo $data['rate'] ?></h6>
+                <h6 id="rateValue"><?php echo $data['rate'] ?></h6>
               </div>
               <br />
               <div id="info-section" class="d-flex justify-content-between">
@@ -130,7 +139,7 @@
               <br />
               <div class="d-flex justify-content-between">
                 <h6 for="">Total Charge</h6>
-                <h6>110 BDT</h6>
+                <h6 id="total">110 BDT</h6>
               </div>
               <br />
               <p>
@@ -147,9 +156,42 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="../js/timer.js"></script>
+    
     <script src="../jquery/jquery.js"></script>
+    <script>
+    $("#reset").click(function(){
+      
+      
+    });
+    $(".btnsub").click(function(){
+      
+      document.getElementById("settime").innerHTML = document.getElementById("display").textContent;
+
+      var val = document.getElementById("display").textContent;
+
+      
+      var valarr = val.split(':');
+      var time = valarr[0] * 60 + valarr[1];
+      var charge = document.getElementById("rateValue").innerHTML;
+      var total = (charge/60*time)+ (((charge/60*time))*0.1);
+      document.getElementById("total").innerHTML = total;
+
+
+    });
+    
+    
+
+
+    
+
+    </script>
+
+    <script type="text/javascript" src="../js/timer.js"></script>
+    
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    
+    
   </body>
-  <script>
+  
+ 
 </html>

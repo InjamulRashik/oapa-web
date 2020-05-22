@@ -55,7 +55,7 @@
                     <div class="card-header">
 
 
-                        <img src="../icons/userdp.png" alt="" class="user"><br>
+                        <img src="../icons/user.png" alt="" class="user"><br>
                         <label id="username" for="">Test Ahmed Khan</label><br>
                         <label id="address" for="">Dhaka,Bangladesh</label>
                     </div>
