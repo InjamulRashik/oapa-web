@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,8 +41,12 @@
                             <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="nav-button" href="#login">Login/Register</a>
+                            <a class="nav-link" id="" href="#login"><b>Login/Register<b></a>
                         </li>
+                        <li class="nav-item">
+                <a class="nav-link btn btn-danger" id="logout-btn" href="logout.php"
+                  ><b>Logout</b></a
+                ></li>
                     </ul>
                 </div>
             </nav>
@@ -56,7 +62,15 @@
 
 
                         <img src="../icons/user.png" alt="" class="user"><br>
-                        <label id="username" for="">Test Ahmed Khan</label><br>
+                        <label id="username" for=""><?php
+                            if(isset($_SESSION['uname'])){
+                            echo $_SESSION['uname'];
+
+                            }else{
+
+                                echo "please login";
+                            }
+                        ?></label><br>
                         <label id="address" for="">Dhaka,Bangladesh</label>
                     </div>
 

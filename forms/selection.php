@@ -87,10 +87,12 @@ $rate = 0;
                 <a class="nav-link" href="#contact">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="nav-button" href="#login"
-                  >Login/Register</a
-                >
-              </li>
+                            <a class="nav-link" id="" href="#login"><b>Login/Register<b></a>
+                        </li>
+                        <li class="nav-item">
+                <a class="nav-link btn btn-danger" id="logout-btn" href="logout.php"
+                  ><b>Logout</b></a
+                ></li>
             </ul>
           </div>
         </nav>
@@ -207,7 +209,7 @@ $rate = 0;
                         <label id="address" for="">Dhaka,Bangladesh</label>
               </div>
               <div class="payment">
-                <div id="info-section"class="d-flex justify-content-between"><h6  for="">Service Hour</h6><h6 >1 Hour</h6> </div> <br>
+                <div id="info-section"class="d-flex justify-content-between"><h6  for="">Service Time</h6><h6 >1 Hour</h6> </div> <br>
                 <br>
                  <div  class="d-flex justify-content-between"><h6>Charge</h6><h6><?php echo $rate ?> BDT</h6> </div> <br>
                   <div id="info-section" class="d-flex justify-content-between"><h6  for="">Service Charge</h6><h6 ><?php echo $charge ?>%</h6> </div> <br>

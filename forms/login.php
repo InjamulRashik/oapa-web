@@ -70,6 +70,8 @@
                   >Login/Register</a
                 >
               </li>
+              
+              </li>
             </ul>
           </div>
         </nav>

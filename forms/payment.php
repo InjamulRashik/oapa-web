@@ -74,10 +74,12 @@
               <a class="nav-link" href="#contact">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="nav-button" href="#login"
-                >Login/Register</a
-              >
-            </li>
+                            <a class="nav-link" id="" href="#login"><b>Login/Register<b></a>
+                        </li>
+                        <li class="nav-item">
+                <a class="nav-link btn btn-danger" id="logout-btn" href="logout.php"
+                  ><b>Logout</b></a
+                ></li>
           </ul>
         </div>
       </nav>
@@ -121,14 +123,14 @@
             </div>
             <div class="payment">
               <div id="info-section" class="d-flex justify-content-between">
-                <h6 for="">Service Hour</h6>
-                <h6 id="settime">1 Hour</h6>
+                <h6 for="">Service Time</h6>
+                <h6 id="settime">0 Hour</h6>
               </div>
               <br />
               <br />
               <div class="d-flex justify-content-between">
                 <h6 for="">Charge</h6>
-                <h6 id="rateValue"><?php echo $data['rate'] ?></h6>
+                <h6 id="rateValue"><?php echo $data['rate'] ?>BDT</h6>
               </div>
               <br />
               <div id="info-section" class="d-flex justify-content-between">
@@ -139,7 +141,7 @@
               <br />
               <div class="d-flex justify-content-between">
                 <h6 for="">Total Charge</h6>
-                <h6 id="total">110 BDT</h6>
+                <h6 id="total"> 0 BDT</h6>
               </div>
               <br />
               <p>

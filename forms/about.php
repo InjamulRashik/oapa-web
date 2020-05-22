@@ -54,11 +54,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact Us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="nav-button" href="#login"
-                  >Login/Register</a
-                >
-              </li>
+               <li class="nav-item">
+                            <a class="nav-link" id="" href="#login"><b>Login/Register<b></a>
+                        </li>
+                        <li class="nav-item">
+                <a class="nav-link btn btn-danger" id="logout-btn" href="logout.php"
+                  ><b>Logout</b></a
+                ></li>
             </ul>
           </div>
         </nav>
